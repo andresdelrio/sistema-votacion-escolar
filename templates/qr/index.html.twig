@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {{ parent() }} Códigos QR{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+    <h1>Códigos QR</h1>
+
+<br>
+{% for estudiante in qr %}
+
+<figure class="figure">
+    <div class="card">
+        <img src='https://chart.googleapis.com/chart?cht=qr&chs=170x170&chl={{estudiante.documento}}'> 
+        <figcaption class="figure-caption">
+            <small class="font-weight-light" style="font-size:10px">{{estudiante.nombre|upper|u.truncate(28,'...')}} 
+            <p class="font-weight-light" style="font-size:8px">{{estudiante.grupo.grado.sede.nombre|upper}} - {{estudiante.grupo.nombre}}</p>
+            </small> 
+        </figcaption>
+    </div>
+</figure>
+{% endfor %}
+{% endblock %}
+    

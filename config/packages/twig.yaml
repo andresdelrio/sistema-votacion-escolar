@@ -1,0 +1,12 @@
+twig:
+    default_path: '%kernel.project_dir%/templates'
+    form_themes: ['bootstrap_5_layout.html.twig']
+    globals:
+        anio_eleccion: '%env(ANIO_ELECCION)%'
+        institucion: '%env(INSTITUCION)%'
+        tipo_de_eleccion: '%env(TIPO_DE_ELECCION)%'
+
+
+when@test:
+    twig:
+        strict_variables: true

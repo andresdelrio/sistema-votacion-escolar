@@ -1,0 +1,73 @@
+		/* Estilos generales para el body */
+        body {
+            background: linear-gradient(to right, #6dd5ed, #2193b0); /* Fondo gradiente */
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            color: #102a43;
+            padding: 20px;
+            height: 100vh; /* Asegura que el fondo cubra toda la altura de la pantalla */
+          }
+
+          
+          
+          .container-fluid {
+            background: transparent; /* Quita el fondo para mostrar el gradiente */
+          }
+
+          .container {
+            display: flex;
+            justify-content: center; /* Centra el contenido horizontalmente */
+            align-items: center;     /* Centra el contenido verticalmente */
+            flex-direction: column;  /* Alinea los elementos hijos en una columna */
+            height: 100vh;           /* Ocupa el 100% de la altura de la ventana del navegador */
+            width: 100vw;            /* Ocupa el 100% de la anchura de la ventana del navegador */
+            margin: 0;               /* Elimina cualquier margen exterior */
+            padding: 0;              /* Elimina cualquier relleno interior */
+            overflow: hidden;        /* Oculta el contenido que desborde */
+          }
+       
+          
+          
+          h1, h2, h3 {
+            color: #ffffff; /* Cambia el color del texto para que contraste con el fondo */
+            margin: 0.5em 0;
+          }
+
+          h4 {
+            color: #005f73; /* Cambia el color del texto para que contraste con el fondo */
+            margin: 0.5em 0;
+          }
+          
+          .alert-info {
+            background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente para el alert */
+            color: #005f73; /* Color que haga contraste con el fondo */
+            border: none; /* Quita el borde por defecto */
+            border-left: 5px solid #005f73; /* Añade un borde lateral como acento */
+            border-radius: 0.5rem;
+          }
+          
+          /* Actualiza los estilos de los inputs y botones aquí como en la sección anterior */
+          
+          #ficha {
+            background-color: rgba(0, 62, 107, 0.9); /* Semi-transparente para ver el fondo */
+            border-radius: 0.5rem;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.25); /* Sombra para dar profundidad */
+            overflow: hidden; /* Asegura que los hijos no sobresalgan de las esquinas redondeadas */
+          }
+          
+          video {
+            border-radius: 0.5rem; /* Bordes redondeados para el video */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidad */
+          }
+          
+          .logo {
+            max-width: 100px;
+            margin-bottom: 1rem;
+          }
+          
+          /* Añade estilos para el botón aquí como en la sección anterior */
+          
+          /* Agrega transiciones suaves a los elementos interactivos */
+          input:focus, button:hover {
+            transition: all 0.3s ease;
+          }
+          

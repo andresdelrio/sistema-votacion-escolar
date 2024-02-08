@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Confirmacion{% endblock %}
+
+{% block body %}
+
+<div class="container">
+    <div class="d-flex justify-content-center">
+        <img src="{{ asset('uploads/Escudo.png')}}" width="90" height="100">
+    </div>
+    <div class="text-center">
+        <h1 class="display-4"><b> {{ tipo_de_eleccion }} {{ anio_eleccion }}</b></h1>
+    </div>
+    <div class="text-center">
+        <h4 class="display-4"> {{ mensaje }} </h4>                
+    </div>
+</div>
+  
+{% endblock %}

@@ -1,0 +1,71 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Participación en votación digital{% endblock %}
+
+{% block body %}
+
+ 
+<div class="containertres">
+            <div class="row text-center">
+                <div class="col align-self-center mt-2">
+                    <a type="button" class="btn btn-primary" href=" {{ url('app_resultados') }} ">Ver resultados</a>
+                </div>
+            </div>
+    <div class="row p-4">
+        <div class="col m-3 bg-info">
+            <h3 class="text-center"> Usuarios que votaron digitalmente </h3>
+        </div>
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                    <th scope="col">N°</th>
+                    <th scope="col">Sede</th>
+                    <th scope="col">Grado</th>
+                    <th scope="col">Grupo</th>
+                    <th scope="col">Estudiante</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        {% for est in Si_voto %}   
+                            <tr>
+                                <td>{{ loop.index }}</td>
+                                <td>{{ est[2] }}</td>
+                                <td>{{ est[1] }}</td>
+                                <td>{{ est[0].nombre }}</td>
+                                <td>{{ est[0].nombre }}</td>
+                            </tr>
+                        {% endfor %}
+                </tbody>
+            </table>
+    </div>
+
+    <div class="row p-4">
+        <div class="col m-3 bg-warning">
+            <h3 class="text-center"> Usuarios que <b>NO</b> registran voto digital </h3>
+        </div>
+        <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">N°</th>
+                        <th scope="col">Sede</th>
+                        <th scope="col">Grado</th>
+                        <th scope="col">Grupo</th>
+                        <th scope="col">Estudiante</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        {% for estudiante in No_voto %}
+                            <tr>
+                                <td>{{ loop.index }}</td>
+                                <td>{{ estudiante[2] }}</td>
+                                <td>{{ estudiante[1] }}</td>
+                                <td>{{ estudiante[0].nombre }}</td>
+                                <td>{{ estudiante[0].nombre }}</td>
+                            </tr>
+                        {% endfor %}
+                </tbody>
+            </table>
+    </div>        
+
+</div>
+{% endblock %}
