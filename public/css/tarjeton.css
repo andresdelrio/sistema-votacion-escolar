@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+.container-fluid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1.5rem;
+    background-color: #EDEFF2;
+    border-radius: 0.5rem;
+}
+
+.card {
+    width: 200px;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+}
+
+.card-content {
+    padding: 1rem;
+    text-align: center;
+}
+
+.radio-btns {
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+cursor: pointer;
+}
+
+.radio-btns img {
+width: 150px;
+height: 150px;
+object-fit: cover;
+border-radius: 50%;
+}
+
+.candidate-name {
+margin-top: 0.5rem; /* Agregamos un margen superior al nombre del candidato */
+text-align: center; /* Centramos el texto */
+}
+
+.selection {
+font-size: 4rem;
+color: #ffffff;
+opacity: 0;
+transition: opacity 1.1s ease;
+}
+
+input[type="radio"] {
+display: none;
+}
+
+.selected {
+background-color: rgba(37, 161, 142, 1);
+}
+
+input[type="submit"] {
+width: 100%;
+max-width: 200px;
+margin: 0 auto;
+}
+
+input[type="submit"] {
+    width: 100%;
+    max-width: 300px; /* Ajusta el ancho máximo según sea necesario */
+    margin: 0 auto;
+    padding: 10px 15px; /* Ajusta el relleno según sea necesario para hacer el botón más grande */
+    font-size: 1.5em; /* Ajusta el tamaño de la fuente para hacer el botón más grande */
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    color: #005f73;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #005f73;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+}
