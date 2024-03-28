@@ -1,6 +1,11 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Confirmacion{% endblock %}
+{% block title %}Votación cerrada{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('css/abrirVotacion.css') }}"> <!-- Asume que tienes un archivo CSS separado -->
+{% endblock %}
 
 {% block body %}
 
@@ -9,10 +14,10 @@
         <img src="{{ asset('uploads/Escudo.png')}}" width="90" height="100">
     </div>
     <div class="text-center">
-        <h1 class="display-4"><b> {{ tipo_de_eleccion }} {{ anio_eleccion }}</b></h1>
+        <h1><b> {{ tipo_de_eleccion }} {{ anio_eleccion }}</b></h1>
     </div>
     <div class="text-center">
-        <h4 class="display-4"> {{ mensaje }} </h4>                
+        <h2> {{ mensaje }} </h2>                
     </div>
 </div>
   
