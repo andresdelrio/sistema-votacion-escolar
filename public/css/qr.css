@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+.contenedor {
+    /* Añade Flexbox al contenedor padre de todas las fichas */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0px; /* Establece el espacio entre fichas a 0px */
+}
+
+
+figure {
+    margin: 0%;
+    page-break-inside: avoid; /* Evita el corte de .figure entre páginas */
+    break-inside: avoid; /* Alternativa para navegadores más modernos */
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    color: #005f73;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #005f73;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+}
+
+.card {
+    width: 170px;
+    height: auto;
+    border: 0.5px solid #000000;
+    background-color: #fff;
+    border-radius: 0%;
+}
+
+.container-qr {
+    height: 170px; /* Altura del contenedor */
+    overflow: hidden; /* Evita que la imagen se salga del contenedor */
+    position: relative; /* Establece el contexto de apilamiento */
+}
+
+.container-qr img {
+    width: calc(100% + 30px); /* Aumenta el ancho de la imagen para que sobresalga del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    position: absolute; /* Posiciona la imagen sobre el contenedor */
+    top: -10px; /* Mueve la imagen hacia arriba para que sobresalga */
+    left: -10px; /* Mueve la imagen hacia la izquierda para que sobresalga */
+    transform: scale(1.1); /* Escala la imagen para que sea un 10% más grande */
+    transition: transform 0.3s ease; /* Agrega una transición suave */
+}
+
+.card-content {
+    text-align: center;
+}
+
+figcaption {
+    text-align: center;
+    margin: 0%;
+    padding: 0%;
+}
+
+img {
+    width: auto;
+    height: auto;
+    border-radius: 0%;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+.figure-caption {
+    font-size: medium;
+}
+
+.figcaption, small, p {
+    font-size: 10px;
+}

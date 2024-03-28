@@ -29,7 +29,8 @@ class QRController extends AbstractController
         $sede = $sede[0]->getNombre();
         $qrEstudiante = $em->getRepository(Estudiante::class)->findBySede($sede);        
         return $this->render('qr/index.html.twig',[
-            'qr'=>$qrEstudiante
+            'qr'=>$qrEstudiante,
+            'sede'=>$sede
         ]);
     }
 }

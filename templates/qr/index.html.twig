@@ -1,28 +1,31 @@
 {% extends 'base.html.twig' %}
 
-{% block title %} {{ parent() }} Códigos QR{% endblock %}
+{% block title %} {{ parent() }} Códigos QR {% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="{{ asset('css/qr.css') }}">
+{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
+    
     <h1>Códigos QR</h1>
+    {% if sede is defined %} <h2> Sede {{ sede }}  </h2> {% endif %}
+    <div class="contenedor">
 
-<br>
-{% for estudiante in qr %}
+    {% for estudiante in qr %}
 
-<figure class="figure">
-    <div class="card">
-        <img src='https://chart.googleapis.com/chart?cht=qr&chs=170x170&chl={{estudiante.documento}}'> 
-        <figcaption class="figure-caption">
-            <small class="font-weight-light" style="font-size:10px">{{estudiante.nombre|upper|u.truncate(28,'...')}} 
-            <p class="font-weight-light" style="font-size:8px">{{estudiante.grupo.grado.sede.nombre|upper}} - {{estudiante.grupo.nombre}}</p>
-            </small> 
-        </figcaption>
+    <figure class="figure">
+        <div class="card">
+            <div class="container-qr"><img src='https://chart.googleapis.com/chart?cht=qr&chs=170x170&chl={{estudiante.documento}}'> </div>
+            <figcaption class="figure-caption">
+                <small>{{estudiante.nombre|upper|u.truncate(25,'...')}} 
+                <p >{{estudiante.grupo.grado.sede.nombre|upper}} - {{estudiante.grupo.nombre}}</p>
+                </small> 
+            </figcaption>
+        </div>
+    </figure>
+    {% endfor %}
     </div>
-</figure>
-{% endfor %}
 {% endblock %}
     
