@@ -4,15 +4,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 1.5rem;
+    margin-top: 0.1rem;
     background-color: #EDEFF2;
-    border-radius: 0.5rem;
+    border-radius: 1.5rem;
 }
 
 .card {
-    width: 200px;
+    width: 160px;
     margin: 0.5rem;
-    padding: 0.5rem;
+    padding: 0rem;
     background-color: #fff;
     border-radius: 0.5rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -20,7 +20,7 @@
 }
 
 .card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-5px);
 }
 
 .card img {
@@ -30,7 +30,7 @@
 }
 
 .card-content {
-    padding: 1rem;
+    padding: 0.3rem;
     text-align: center;
 }
 
@@ -50,15 +50,15 @@ border-radius: 50%;
 }
 
 .candidate-name {
-margin-top: 0.5rem; /* Agregamos un margen superior al nombre del candidato */
+margin-top: 0.3rem; /* Agregamos un margen superior al nombre del candidato */
 text-align: center; /* Centramos el texto */
 }
 
 .selection {
-font-size: 4rem;
+font-size: 3rem;
 color: #ffffff;
 opacity: 0;
-transition: opacity 1.1s ease;
+transition: opacity 1.5s ease;
 }
 
 input[type="radio"] {
@@ -70,32 +70,30 @@ background-color: rgba(37, 161, 142, 1);
 }
 
 input[type="submit"] {
-width: 100%;
-max-width: 200px;
-margin: 0 auto;
-}
-
-input[type="submit"] {
     width: 100%;
-    max-width: 300px; /* Ajusta el ancho máximo según sea necesario */
+    max-width: 400px; /* Ajusta el ancho máximo según sea necesario */
     margin: 0 auto;
     padding: 10px 15px; /* Ajusta el relleno según sea necesario para hacer el botón más grande */
-    font-size: 1.5em; /* Ajusta el tamaño de la fuente para hacer el botón más grande */
+    font-size: 4em; /* Ajusta el tamaño de la fuente para hacer el botón más grande */
 }
 
 h1 {
     text-align: center;
-    margin-bottom: 1rem;
-    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
     color: #005f73;
     font-family: 'Roboto', sans-serif;
-    font-weight: 800;
+    font-weight: 900;
 }
 
 h2 {
     text-align: center;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     color: #005f73;
     font-family: 'Roboto', sans-serif;
     font-weight: 600;
+}
+
+.mt-3 {
+    margin-top: 3rem !important; 
 }
